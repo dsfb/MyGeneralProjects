@@ -1,0 +1,38 @@
+create_book_table = "CREATE TABLE IF NOT EXISTS book(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    isbn TEXT NOT NULL,
+    book_name TEXT NOT NULL,
+    genre TEXT NOT NULL,
+    author TEXT NOT NULL,
+    book_year INTEGER NOT NULL,
+    book_count INTEGER NOT NULL,
+    book_page INTEGER NOT NULL,
+    rank REAL NOT NULL
+);"
+
+create_student_table = "CREATE TABLE IF NOT EXISTS student(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    full_name TEXT NOT NULL,
+    gender TEXT NOT NULL,
+    date_of_birth TEXT NOT NULL
+);"
+
+create_staff_table = "CREATE TABLE IF NOT EXISTS staff(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    full_name TEXT NOT NULL,
+    gender TEXT NOT NULL,
+    date_of_birth TEXT NOT NULL
+);"
+
+create_operation_table = "CREATE TABLE IF NOT EXISTS operation(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    student_id INTEGER NOT NULL,
+    staff_id INTEGER NOT NULL,
+    book_id INTEGER NOT NULL,
+    iss_date TEXT NOT NULL,
+    return_date TEXT NOT NULL,
+    return_indicator NUMERIC NOT NULL,
+    FOREIGN KEY(student_id) REFERENCES student(id),
+    FOREIGN KEY(staff_id) REFERENCES staff(id),
+    FOREIGN KEY(book_id) REFERENCES book(id)
+);"
