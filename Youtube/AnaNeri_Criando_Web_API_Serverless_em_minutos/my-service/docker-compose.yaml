@@ -1,0 +1,25 @@
+version: '3'
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    networks:
+      - mongodb_network
+    ports:
+      - 3000:3000
+  mongodb:
+    container_name: mongodb
+    image: mongodb/mongodb-community-server:6.0-ubi8
+    volumes:
+      - mongodata:/data/db
+    networks:
+      - mongodb_network
+    ports:
+      - 27017:27017
+networks:
+  mongodb_network:
+    driver: bridge
+volumes:
+  mongodata:
+    driver: local

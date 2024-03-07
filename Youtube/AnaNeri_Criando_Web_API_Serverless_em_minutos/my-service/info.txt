@@ -1,0 +1,11 @@
+https://stackoverflow.com/questions/44781889/permission-error-with-mongo-when-running-docker/73565165#73565165
+
+https://stackoverflow.com/questions/49937772/docker-volume-must-be-a-mapping-not-a-string
+
+localhost:3000/dev/data
+
+https://www.mongodb.com/community/forums/t/asp-net-mongo-db-system-timeoutexception-a-timeout-occurred-after-30000ms-in-docker-compose/180483
+
+https://stackoverflow.com/questions/74165616/timeout-mongodb-with-docker
+
+Link do video deste projeto no youtube: https://www.youtube.com/watch?v=3A8APu9FiSI

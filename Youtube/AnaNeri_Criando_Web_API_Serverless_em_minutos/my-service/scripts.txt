@@ -1,0 +1,8 @@
+serverless create --template aws-nodejs --path my-service
+npm init --y
+npm install -g serverless serverless-offline mongodb
+npm run start
+docker-compose up --build
+docker system prune -a --volumes
+
+docker system prune -a --volumes -f; clear; docker-compose up --build
